@@ -1,7 +1,7 @@
 const SidebarItem = ({ icon, label, isExpanded, onClick }) => {
   return (
     <div
-      className="flex items-center p-3 w-full hover:bg-cyan-900 cursor-pointer transition-colors duration-300 ease-in-out rounded-lg"
+      className="flex items-center p-3 w-full hover:bg-gray-600 cursor-pointer transition-colors duration-300 ease-in-out rounded-lg"
       onClick={onClick}
     >
       <div className="text-2xl">{icon}</div>

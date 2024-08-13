@@ -1,5 +1,5 @@
 import React from 'react'
-import Graph from './Graph';
+import Graph from '../../components/admin.components/Graph';
 
 function StatusCards() {
     const cards = [
@@ -62,7 +62,7 @@ function StatusCards() {
     ))}
  
   </div>
-  <Graph/>
+  {/* <Graph/> */}
   </>
   )
 }

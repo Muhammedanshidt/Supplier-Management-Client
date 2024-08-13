@@ -10,21 +10,30 @@ import {
 } from "react-icons/fa";
 import SidebarItem from "./SidebarItem";
 import Logo from "../../assets/Bone-logo.png";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AdminSidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const Logout = () => {
+    sessionStorage.removeItem("adminToken");
+    toast.success("Successfully logged out!");
+    setTimeout(() => {
+      navigate("/admin-login");
+    }, 1000);
+  };
   return (
     <div className="flex h-screen">
       <div
         className={`flex flex-col ${
           isExpanded ? "w-64 px-2" : "w-16"
-        } bg-gradient-to-b from-[#486777] to-[#0F2027] text-white h-full transition-width duration-300 ease-in-out shadow-lg`}
+        } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 ease-in-out shadow-lg`}
       >
         <div
           className={`flex items-center justify-between p-4  ${
@@ -43,8 +52,8 @@ const AdminSidebar = () => {
             className={`${
               isExpanded
                 ? "text-cyan-900 hover:bg-gray-200"
-                : "text-white hover:bg-cyan-900"
-            } p-2  rounded-full transition-colors duration-300`}
+                : "text-white hover:bg-gray-500  mr-20"
+            } p-2 rounded-full transition-colors duration-300`}
           >
             <FaBars className="text-2xl" />
           </button>
@@ -86,6 +95,7 @@ const AdminSidebar = () => {
               icon={<FaSignOutAlt />}
               label="Logout"
               isExpanded={isExpanded}
+              onClick={Logout}
             />
           </div>
         </nav>

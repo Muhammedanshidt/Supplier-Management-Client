@@ -9,25 +9,27 @@ import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
-  const onSubmit = async(data) => {
+  const onSubmit = async (data) => {
     try {
       const response = await Axios.post("/admin/login", data);
       const { message, adminToken } = response.data;
-      toast.success(message)
-      sessionStorage.setItem("admintoken", adminToken)
-      navigate("/admin")
-      reset()    
+      toast.success(message);
+      sessionStorage.setItem("adminToken", adminToken);
+      reset();
+      setTimeout(() => {
+        navigate("/admin");
+      }, 1000);
     } catch (error) {
-      toast.error(error.response.data.error)
+      toast.error(error.response.data.error || "Login failed");
       console.error("Login failed", error);
     }
   };

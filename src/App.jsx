@@ -1,12 +1,11 @@
-import Sidebar from "./components/admin.components/Sidebar";
-import Registration from "./components/supplier.components/Registration";
+import { BrowserRouter } from "react-router-dom";
+import MainRoute from "./MainRoute";
 
 function App() {
   return (
-    <>
-      <Sidebar />
-      <Registration/>
-    </>
+    <BrowserRouter>
+      <MainRoute />
+    </BrowserRouter>
   );
 }
 
