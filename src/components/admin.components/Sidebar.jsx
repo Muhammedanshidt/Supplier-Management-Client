@@ -1,5 +1,5 @@
 import React from "react";
-import logoImg from "../../assets/Bone Logo.png";
+import logoImg from "../../assets/Logo2.png"
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
