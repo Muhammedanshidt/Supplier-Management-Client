@@ -2,10 +2,10 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 const AdminLoginProttect = ({ children }) => {
-  const adminToken = sessionStorage.getItem('adminToken'); 
-  console.log(adminToken);
+  const isAuthenticated = !!sessionStorage.getItem('adminToken'); 
+  console.log("login",isAuthenticated);
   
-  if (adminToken) {
+  if (isAuthenticated) {
     return <Navigate to="/admin" />; 
   }
 

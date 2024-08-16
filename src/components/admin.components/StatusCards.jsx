@@ -10,7 +10,7 @@ function StatusCards() {
           changeDescription: "from 2019",
           bgColor: "bg-gray-200",
           badgeColor: "bg-green-300",
-          bg:"bg-yellow-300"
+          bg:"bg-cyan-600"
         },
         {
             title: "Total Users",
@@ -42,7 +42,7 @@ function StatusCards() {
       ];
   return (
     <>
-    <div className="grid grid-cols-1 gap-5 mt-20 sm:grid-cols-2 lg:grid-cols-4 mx-8">
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mx-8">
     {cards.map((card, index) => (
       <div key={index} className={`p-4 transition-shadow border border-gray-300 rounded-lg shadow-sm hover:shadow-lg ${card.bg}`}>
         <div className="flex items-start justify-between">
