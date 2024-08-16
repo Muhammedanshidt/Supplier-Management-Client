@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const RedirectIfAuthenticated = ({ children }) => {
+const AdminLoginProttect = ({ children }) => {
   const adminToken = sessionStorage.getItem('adminToken'); 
   console.log(adminToken);
   
@@ -12,4 +12,4 @@ const RedirectIfAuthenticated = ({ children }) => {
   return children; 
 };
 
-export default RedirectIfAuthenticated;
+export default AdminLoginProttect;
