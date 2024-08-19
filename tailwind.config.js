@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import daisyui from "daisyui"
-export default {
+import withMT from "@material-tailwind/react/utils/withMT";
+export default withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,jsx}",
@@ -16,16 +17,16 @@ export default {
         // 'custom-light': '0 2px 4px rgba(0, 0, 0, 0.1)',
         'custom-dark': '0 4px 6px rgba(0, 0, 0, 0.3)',
       },
-      borderWidth : {
-        "border-top":"1px"
+      borderWidth: {
+        "border-top": "1px"
       }
     },
   },
-  daisyui : {
+  daisyui: {
     themes: 'light',
   },
   plugins: [
     daisyui
   ],
-}
+})
 

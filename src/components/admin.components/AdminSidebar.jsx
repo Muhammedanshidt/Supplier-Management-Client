@@ -30,9 +30,9 @@ const AdminSidebar = () => {
   };
 
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex flex-col h-screen">
       <header>
-        <AdminNavbar toggleSidebar={toggleSidebar} isExpanded={isExpanded}/>
+        <AdminNavbar toggleSidebar={toggleSidebar} isExpanded={isExpanded} />
       </header>
       <div className="flex h-full">
         <aside
@@ -41,7 +41,7 @@ const AdminSidebar = () => {
           } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 shadow-lg`}
         >
           <nav className="flex flex-col justify-between flex-1">
-            <div className="flex flex-col space-y-2 mt-4 px-1">
+            <div className="flex flex-col px-1 mt-4 space-y-2">
               <SidebarItem
                 icon={<FaHome />}
                 label="Home"
@@ -114,7 +114,7 @@ const AdminSidebar = () => {
             © 2024 B One Rubbers
           </div>
         </aside>
-        <main className="flex-1 bg-gray-50 overflow-auto">
+        <main className="flex-1 overflow-auto bg-gray-50">
           <Outlet />
         </main>
       </div>

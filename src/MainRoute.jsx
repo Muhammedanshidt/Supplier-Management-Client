@@ -2,8 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import AdminLogin from "../src/pages/admin.pages/AdminLogin";
 import AdminSidebar from "./components/admin.components/AdminSidebar";
 import AdminHome from "./pages/admin.pages/AdminHome";
-// import ProtectedAdminRoute from "./Authentications/ProtectedAdminRoute";
-// import AdminLoginProttect from "./Authentications/AdminLoginProttect";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -13,7 +11,6 @@ import LatexParchase from "./pages/admin.pages/LatexParchase";
 import DrcUpdation from "./pages/admin.pages/DrcUpdation";
 import Drivers from "./pages/admin.pages/Drivers";
 import Tapers from "./pages/admin.pages/Tapers";
-
 export const Axios = axios.create({
   baseURL: "http://localhost:3333/api",
 });
@@ -69,9 +66,9 @@ const MainRoute = () => {
             element={
               // <ProtectedAdminRoute>
               <Suppliers />
-              // </ProtectedAdminRoute>
             }
           />
+
           <Route
             path="/admin/drivers"
             element={

@@ -5,8 +5,8 @@ import Logo from "../../assets/Bone-logo.png";
 
 const AdminNavbar = ({ toggleSidebar, isExpanded }) => {
   return (
-    <div className="flex justify-between items-center w-full">
-      <div className="flex items-center justify-between p-4 text-white w-64">
+    <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-64 p-4 text-white">
         <Link
           to="/admin"
           className={`transform transition-all duration-300 ease-in-out ${
@@ -17,7 +17,7 @@ const AdminNavbar = ({ toggleSidebar, isExpanded }) => {
         </Link>
         <button
           onClick={toggleSidebar}
-          className="text-cyan-950 hover:bg-gray-300 p-2 rounded-full transition-colors duration-300"
+          className="p-2 transition-colors duration-300 rounded-full text-cyan-950 hover:bg-gray-300"
         >
           <FaBars className="text-2xl" />
         </button>
