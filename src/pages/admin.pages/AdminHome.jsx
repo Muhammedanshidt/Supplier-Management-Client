@@ -7,6 +7,8 @@ const AdminHome = () => {
     <div>
       <StatusCards />
       <Graph/>
+      <Graph/>
+      
     </div>
   );
 };

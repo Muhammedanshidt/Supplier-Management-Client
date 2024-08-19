@@ -2,44 +2,45 @@ import React from 'react'
 import Graph from '../../components/admin.components/Graph';
 
 function StatusCards() {
-    const cards = [
-        {
-          title: "Total Users",
-          value: "100,221",
-          change: "14%",
-          changeDescription: "from 2019",
-          bgColor: "bg-gray-200",
-          badgeColor: "bg-green-300",
-          bg:"bg-cyan-600"
-        },
-        {
-            title: "Total Users",
-            value: "100,221",
-            change: "14%",
-            changeDescription: "from 2019",
-            bgColor: "bg-gray-200",
-            badgeColor: "bg-green-300",
-            bg:"bg-blue-300"
-          },
-          {
-            title: "Total Users",
-            value: "100,221",
-            change: "14%",
-            changeDescription: "from 2019",
-            bgColor: "bg-gray-200",
-            badgeColor: "bg-green-300",
-            bg:'bg-teal-300'
-          },        {
-            title: "Total Users",
-            value: "100,221",
-            change: "14%",
-            changeDescription: "from 2019",
-            bgColor: "bg-gray-200",
-            badgeColor: "bg-green-300",
-            bg:"bg-orange-300"
-          }
-        // Add more cards if needed
-      ];
+  const cards = [
+    {
+      title: "Total Users",
+      value: "100,221",
+      change: "14%",
+      changeDescription: "from 2019",
+      bgColor: "bg-blue-100",
+      badgeColor: "bg-blue-500",
+      bg: "#22235F"
+    },
+    {
+      title: "New Signups",
+      value: "10,450",
+      change: "22%",
+      changeDescription: "from last month",
+      bgColor: "bg-blue-100",
+      badgeColor: "bg-green-500",
+      bg: ""
+    },
+    {
+      title: "Active Users",
+      value: "89,750",
+      change: "5%",
+      changeDescription: "from last week",
+      bgColor: "bg-blue-100",
+      badgeColor: "bg-yellow-500",
+      bg: ""
+    },
+    {
+      title: "Revenue",
+      value: "$123,456",
+      change: "18%",
+      changeDescription: "from last quarter",
+      bgColor: "bg-blue-100",
+      badgeColor: "bg-red-500",
+      bg: ""
+    }
+  ];
+  
   return (
     <>
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mx-8">
@@ -53,7 +54,7 @@ function StatusCards() {
           <div className={`p-10 ${card.bgColor} rounded-md`}></div>
         </div>
         <div>
-          <span className={`inline-block px-2 text-sm text-white ${card.badgeColor} rounded`}>
+          <span className={`inline-block px-2 mr-2 text-sm text-white ${card.badgeColor} rounded`}>
             {card.change}
           </span>
           <span>{card.changeDescription}</span>
@@ -62,7 +63,6 @@ function StatusCards() {
     ))}
  
   </div>
-  {/* <Graph/> */}
   </>
   )
 }
