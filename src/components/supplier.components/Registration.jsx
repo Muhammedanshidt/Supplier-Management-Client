@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { inputLabel, inputStyle } from "../../styles/style";
+
 function Registration() {
   const [open, setOpen] = useState(false);
-
   const handleOpen = () => setOpen(!open);
 
   return (
     <>
-      <Button onClick={handleOpen} variant="gradient">
-        Add Product
+      <Button onClick={handleOpen} variant="gradient" className="bg-blue-gray-500">
+        Add Product 
       </Button>
       <Dialog size="sm" open={open} handler={handleOpen} className="p-4">
         <DialogHeader className="relative block m-0">

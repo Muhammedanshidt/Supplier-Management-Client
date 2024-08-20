@@ -34,14 +34,14 @@ const AdminSidebar = () => {
       <header className="fixed left-0 top-0 right-0 z-50 ">
         <AdminNavbar toggleSidebar={toggleSidebar} isExpanded={isExpanded}/>
       </header>
-      <div className="flex h-full pt-[72px]">
+      <div className="flex h-full pt-[72px] ">
         <aside
           className={`flex flex-col ${
             isExpanded ? "w-64 px-2" : "w-16"
-        } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 ease-in-out shadow-lg`}
-      >
+          } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 shadow-lg`}
+        >
           <nav className="flex flex-col justify-between flex-1">
-            <div className="flex flex-col px-1 mt-4 space-y-2">
+            <div className="flex flex-col space-y-2 mt-4 px-1">
               <SidebarItem
                 icon={<FaHome />}
                 label="Home"
@@ -114,7 +114,6 @@ const AdminSidebar = () => {
             © 2024 B One Rubbers
           </div>
         </aside>
-
         <main className="flex-1 bg-gray-50 overflow-auto pt-6">
           <Outlet />
         </main>

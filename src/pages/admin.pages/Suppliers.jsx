@@ -1,8 +1,12 @@
 import React from 'react'
+import Registration from '../../components/supplier.components/Registration'
 
 const Suppliers = () => {
   return (
-    <div>Suppliers</div>
+    <div>
+       <div>Supsopefispajfviod</div>
+         <Registration/>
+    </div>
   )
 }
 

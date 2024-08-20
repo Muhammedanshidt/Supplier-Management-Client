@@ -69,122 +69,104 @@ const AdminNavbar = ({ toggleSidebar, isExpanded }) => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-between w-full">
-      <div className="flex items-center justify-between w-64 p-4 text-white">
-        <Link
-          to="/admin"
-          className={`transform transition-all duration-300 ease-in-out ${
-            isExpanded ? "opacity-100 scale-100 " : "opacity-0 scale-0 absolute"
-          }`}
-        >
-          <img src={Logo} alt="B One Rubbers" className="w-28" />
-        </Link>
-        <button
-          onClick={toggleSidebar}
-          className="p-2 transition-colors duration-300 rounded-full text-cyan-950 hover:bg-gray-300"
-        >
-          <FaBars className="text-2xl" />
-        </button>
-=======
-    <div className="flex items-center justify-between w-full bg-slate-100 shadow-md">
-      <div
-        className={`flex items-center p-4 transition-all duration-500 ease-in-out delay-150 ${
-          isExpanded ? "w-64 justify-between" : "justify-start gap-4"
-        }`}
-      >
-        {isExpanded ? (
-          <>
-            <Link
-              to="/admin"
-              className="transition-all duration-500 ease-in-out"
-            >
-              <img
-                src={Logo}
-                alt="B One Rubbers"
-                className="w-28 transition-all duration-500 ease-in-out"
-              />
-            </Link>
-            <button
-              onClick={toggleSidebar}
-              className="p-2 text-cyan-950 hover:bg-gray-300 rounded-full transition-all duration-500 ease-in-out"
-            >
-              <FaBars className="text-2xl" />
-            </button>
-          </>
-        ) : (
-          <>
-            <button
-              onClick={toggleSidebar}
-              className="p-2 text-cyan-950 hover:bg-gray-300 rounded-full transition-all duration-500 ease-in-out"
-            >
-              <FaBars className="text-2xl" />
-            </button>
-            <Link
-              to="/admin"
-              className="transition-all duration-500 ease-in-out delay-150"
-            >
-              <img
-                src={Logo}
-                alt="B One Rubbers"
-                className="w-28 ml-2 transition-all duration-500 ease-in-out"
-              />
-            </Link>
-          </>
-        )}
-      </div>
 
-      <div className="flex flex-grow justify-between items-center p-4">
-        <div className="flex-1 flex justify-center gap-12 font-medium">
-          <Link to={"#"}>Employee</Link>
-          <Link to={"#"}>Vehicles</Link>
-          <Link to={"#"}>Latex Rate</Link>
-        </div>
-        <div className="flex-1 flex gap-20 justify-center  relative">
-          <span
-            onClick={handleClickMessageIcon}
-            className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full"
+    <div className="flex items-center justify-between w-full bg-slate-100 shadow-md">
+    <div
+      className={`flex items-center p-4 transition-all duration-500 ease-in-out delay-150 ${
+        isExpanded ? "w-64 justify-between" : "justify-start gap-4"
+      }`}
+    >
+      {isExpanded ? (
+        <>
+          <Link
+            to="/admin"
+            className="transition-all duration-500 ease-in-out"
           >
-            <MdMessage className="text-2xl"/>
-            {messages.length > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
-                {messages.length}
-              </span>
-            )}
-            <MessageDropdown
-              isOpen={showMessageDropdown}
-              messages={messages}
-              onClose={closeMessageDropdown}
+            <img
+              src={Logo}
+              alt="B One Rubbers"
+              className="w-28 transition-all duration-500 ease-in-out"
             />
-          </span>
-          <span
-            onClick={handleClickNotificationIcon}
-            className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full"
+          </Link>
+          <button
+            onClick={toggleSidebar}
+            className="p-2 text-cyan-950 hover:bg-gray-300 rounded-full transition-all duration-500 ease-in-out"
           >
-            <IoIosNotifications className="text-2xl"/>
-            {notifications.length > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
-                {notifications.length}
-              </span>
-            )}
-            <NotificationDropdown
-              isOpen={showNotificationDropdown}
-              notifications={notifications}
-              onClose={closeNotificationDropdown}
+            <FaBars className="text-2xl" />
+          </button>
+        </>
+      ) : (
+        <>
+          <button
+            onClick={toggleSidebar}
+            className="p-2 text-cyan-950 hover:bg-gray-300 rounded-full transition-all duration-500 ease-in-out"
+          >
+            <FaBars className="text-2xl" />
+          </button>
+          <Link
+            to="/admin"
+            className="transition-all duration-500 ease-in-out delay-150"
+          >
+            <img
+              src={Logo}
+              alt="B One Rubbers"
+              className="w-28 ml-2 transition-all duration-500 ease-in-out"
             />
-          </span>
-          <span onClick={handleClickLogoutIcon} className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full">
-            <RiAdminLine className="text-2xl"/>
-            <LogoutDropdown 
-            isOpen={showLogoutDropdown} 
-            onClose={closeLogoutDropdown} 
-            onLogout={handleLogout} 
+          </Link>
+        </>
+      )}
+    </div>
+
+    <div className="flex flex-grow justify-between items-center p-4">
+      <div className="flex-1 flex justify-center gap-12 font-medium">
+        <Link to={"#"}>Employee</Link>
+        <Link to={"#"}>Vehicles</Link>
+        <Link to={"#"}>Latex Rate</Link>
+      </div>
+      <div className="flex-1 flex gap-20 justify-center  relative">
+        <span
+          onClick={handleClickMessageIcon}
+          className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full"
+        >
+          <MdMessage className="text-2xl"/>
+          {messages.length > 0 && (
+            <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
+              {messages.length}
+            </span>
+          )}
+          <MessageDropdown
+            isOpen={showMessageDropdown}
+            messages={messages}
+            onClose={closeMessageDropdown}
           />
-          </span>
-        </div>
->>>>>>> 999ac96fa44d6e1b85c387e8204f6ae6ce1c471d
+        </span>
+        <span
+          onClick={handleClickNotificationIcon}
+          className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full"
+        >
+          <IoIosNotifications className="text-2xl"/>
+          {notifications.length > 0 && (
+            <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
+              {notifications.length}
+            </span>
+          )}
+          <NotificationDropdown
+            isOpen={showNotificationDropdown}
+            notifications={notifications}
+            onClose={closeNotificationDropdown}
+          />
+        </span>
+        <span onClick={handleClickLogoutIcon} className="cursor-pointer relative hover:bg-slate-300 p-1 rounded-full">
+          <RiAdminLine className="text-2xl"/>
+          <LogoutDropdown 
+          isOpen={showLogoutDropdown} 
+          onClose={closeLogoutDropdown} 
+          onLogout={handleLogout} 
+        />
+        </span>
       </div>
     </div>
+  </div>
   );
 };
 
