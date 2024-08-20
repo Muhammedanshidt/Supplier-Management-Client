@@ -30,22 +30,16 @@ const AdminSidebar = () => {
   // };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col h-screen">
-      <header>
-        <AdminNavbar toggleSidebar={toggleSidebar} isExpanded={isExpanded} />
-=======
     <div className="flex h-screen flex-col ">
       <header className="fixed left-0 top-0 right-0 z-50 ">
         <AdminNavbar toggleSidebar={toggleSidebar} isExpanded={isExpanded}/>
->>>>>>> 999ac96fa44d6e1b85c387e8204f6ae6ce1c471d
       </header>
-      <div className="flex h-full pt-[72px] ">
+      <div className="flex h-full pt-[72px]">
         <aside
           className={`flex flex-col ${
             isExpanded ? "w-64 px-2" : "w-16"
-          } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 shadow-lg`}
-        >
+        } bg-gradient-to-b from-[#38505f] to-[#0c1c23] text-white h-full transition-width duration-300 ease-in-out shadow-lg`}
+      >
           <nav className="flex flex-col justify-between flex-1">
             <div className="flex flex-col px-1 mt-4 space-y-2">
               <SidebarItem
@@ -120,11 +114,8 @@ const AdminSidebar = () => {
             © 2024 B One Rubbers
           </div>
         </aside>
-<<<<<<< HEAD
-        <main className="flex-1 overflow-auto bg-gray-50">
-=======
+
         <main className="flex-1 bg-gray-50 overflow-auto pt-6">
->>>>>>> 999ac96fa44d6e1b85c387e8204f6ae6ce1c471d
           <Outlet />
         </main>
       </div>
